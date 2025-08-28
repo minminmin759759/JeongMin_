@@ -1162,10 +1162,19 @@ section,
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  
+}
+
+.portfolio .portfolio-item {
+  padding: 10px; /* 카드 사이 간격 */
 }
 
 .portfolio .portfolio-content img {
-  transition: 0.3s;
+  ttransition: transform 0.3s ease; /* 확대 부드럽게 */
+  display: block; /* inline-block 여백 방지 */
+  width: 100%;    /* 박스 안에 딱 맞게 */
+  height: auto;
+   object-fit: cover; 
 }
 
 .portfolio .portfolio-content .portfolio-info {
