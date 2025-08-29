@@ -1252,6 +1252,15 @@ section,
   text-align: center;
 }
 
+.item-box {
+  position: relative;
+  overflow: hidden; /* radius가 내부에도 적용되게 */
+  border-radius: 20px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 부드러운 그림자 */
+}
+
+
+
 
 
 /*--------------------------------------------------------------
