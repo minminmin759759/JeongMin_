@@ -1240,6 +1240,18 @@ section,
   transform: scale(1.2);
 }
 
+.portfolio-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6); /* 반투명 검정 */
+  color: #fff; /* 흰 글씨 */
+  font-size: 18px;
+  text-align: center;
+}
+
 
 
 /*--------------------------------------------------------------
