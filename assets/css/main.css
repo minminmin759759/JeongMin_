@@ -917,7 +917,7 @@ section,
 .typing {
   font-size: 48px;
   font-weight: bold;
-  color: white;
+  color: #86bbef;
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
@@ -927,6 +927,14 @@ section,
   animation: typing 3s steps(13, end) forwards, blink .7s step-end infinite;
   display: block;
   text-align: center;
+  
+}
+
+
+
+.highlight {
+  color: #1e90ff;
+  
 }
 
 @keyframes typing {
@@ -1338,8 +1346,14 @@ section,
 
 .portfolio .portfolio-content .portfolio-info .details-link {
   left: 50%;
-  font-size: 34px;
+  font-size: 100px;
   line-height: 0;
+}
+
+@media (max-width: 768px) {
+  .portfolio .portfolio-content .portfolio-info .details-link {
+    font-size: 70px; /* 모바일에서는 조금 작게 */
+  }
 }
 
 .portfolio .portfolio-content:hover .portfolio-info {
