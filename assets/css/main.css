@@ -930,11 +930,11 @@ section,
   white-space: nowrap;
   overflow: hidden;
   border-right: .1em solid white;
-  width: 0;
+  width: fit-content; /* ✅ 추가 */
   margin: 0 auto;
-  animation: typing 3s steps(13, end) forwards, blink .7s step-end infinite;
   display: block;
   text-align: center;
+  animation: typing 3s steps(13, end) forwards, blink .7s step-end infinite;
   
 }
 
