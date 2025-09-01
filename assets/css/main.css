@@ -925,7 +925,7 @@ section,
   width: 0;
   margin: 0 auto;
   animation: typing 3s steps(13, end) forwards, blink .7s step-end infinite;
-  display: inline-block;
+  display: block;
   text-align: center;
 }
 
