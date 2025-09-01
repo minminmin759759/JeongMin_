@@ -938,7 +938,9 @@ section,
   
 }
 
-
+@media (max-width:400px){
+  .typing {font-size: 30px;}
+}
 
 .highlight {
   color: #1e90ff;
