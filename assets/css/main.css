@@ -60,6 +60,10 @@
   scroll-behavior: smooth;
 }
 
+* {
+  font-family: 'notosans', sans-serif !important;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -748,25 +752,23 @@ section,
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 1400px;
-  padding: 0 40px;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 /* 히어로 텍스트 컨테이너 */
 .hero-text-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 60px;
+  align-items: center;
+  gap: 40px;
   margin-bottom: 50px;
-  width: 100%;
 }
 
-/* 왼쪽 정렬 텍스트 */
+/* 메인 텍스트 (중앙 정렬) */
 .left-text {
-  text-align: left;
+  text-align: center;
   width: 100%;
-  padding-left: 5%;
 }
 
 .left-text .fade-line {
@@ -774,28 +776,27 @@ section,
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 2.2rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 8px;
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateY(30px);
   animation-fill-mode: forwards;
 }
 
 .left-text .line1 {
-  animation: slideInLeft 0.8s ease-out 0.3s forwards;
+  animation: slideInUp 0.8s ease-out 0.3s forwards;
 }
 
 .left-text .line2 {
-  animation: slideInLeft 0.8s ease-out 0.6s forwards;
+  animation: slideInUp 0.8s ease-out 0.6s forwards;
 }
 
-/* 오른쪽 정렬 텍스트 */
+/* 이름 텍스트 (중앙 정렬) */
 .right-text {
-  text-align: right;
+  text-align: center;
   width: 100%;
-  padding-right: 5%;
 }
 
 .name-text {
@@ -803,34 +804,22 @@ section,
   font-size: 2.8rem;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   opacity: 0;
-  transform: translateX(100px);
-  animation: slideInRight 0.8s ease-out 0.9s forwards;
+  transform: translateY(30px);
+  animation: slideInUp 0.8s ease-out 0.9s forwards;
   display: block;
 }
 
-/* 왼쪽에서 슬라이드인 애니메이션 */
-@keyframes slideInLeft {
+/* 아래에서 위로 슬라이드인 애니메이션 */
+@keyframes slideInUp {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* 오른쪽에서 슬라이드인 애니메이션 */
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -841,7 +830,7 @@ section,
   display: block;
   margin-top: 30px;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 1.3s forwards, btn-up-down 1s ease-in-out 2s infinite alternate-reverse;
+  animation: slideInUp 0.8s ease-out 1.3s forwards, btn-up-down 1s ease-in-out 2s infinite alternate-reverse;
 }
 
 .hero .btn-scroll i {
@@ -850,17 +839,6 @@ section,
 
 .hero .btn-scroll:hover {
   color: var(--accent-color-min);
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes btn-up-down {
@@ -874,29 +852,12 @@ section,
 
 /* 태블릿 반응형 */
 @media (max-width: 1024px) {
-  .hero .container {
-    max-width: 1200px;
-    padding: 0 30px;
-  }
-  
-  .hero-text-container {
-    gap: 50px;
-  }
-  
   .left-text .fade-line {
     font-size: 2rem;
   }
   
   .name-text {
     font-size: 2.5rem;
-  }
-  
-  .left-text {
-    padding-left: 4%;
-  }
-  
-  .right-text {
-    padding-right: 4%;
   }
 }
 
@@ -906,10 +867,6 @@ section,
     padding: 100px 0 40px 0;
   }
   
-  .hero .container {
-    padding: 0 20px;
-  }
-  
   .hero-text-container {
     gap: 30px;
     margin-bottom: 40px;
@@ -917,24 +874,13 @@ section,
   
   .left-text .fade-line {
     font-size: 1.6rem;
-    line-height: 1.3;
+    line-height: 1.4;
     margin-bottom: 6px;
-    letter-spacing: -0.01em;
   }
   
   .name-text {
     font-size: 2rem;
-    letter-spacing: 0.02em;
-  }
-  
-  .left-text {
-    padding-left: 0;
-    text-align: center;
-  }
-  
-  .right-text {
-    padding-right: 0;
-    text-align: center;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -957,7 +903,6 @@ section,
   }
 }
 
-/* 아주 작은 화면 */
 @media (max-width: 360px) {
   .left-text .fade-line {
     font-size: 1.3rem;
@@ -1080,6 +1025,24 @@ section,
   background: var(--background-color);
   border: 2px solid var(--accent-color-min);
 }
+
+.resume-section {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background-color: #f7f7f7; /* 밝은 회색 배경 */
+}
+
+/* 조금 다른 색으로 차이 주기 */
+.resume-section.license {
+  background-color: #e6f0ff; /* 연한 블루 */
+}
+
+.resume-section.career {
+  background-color: #ffe6e6; /* 연한 레드 */
+}
+
+
 
 /*--------------------------------------------------------------
 # Services Section
