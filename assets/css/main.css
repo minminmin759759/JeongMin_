@@ -969,7 +969,6 @@ section,
 .about .content ul li {
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
 }
 
 .about .content ul strong {
@@ -981,6 +980,8 @@ section,
   margin-right: 5px;
   color: var(--accent-color-min);
   line-height: 0;
+  position: relative;
+  top: 5px;
 }
 
 /*--------------------------------------------------------------
