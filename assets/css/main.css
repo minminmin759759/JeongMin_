@@ -1368,13 +1368,13 @@ section,
 
 .portfolio .portfolio-content .portfolio-info .details-link {
   left: 50%;
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0;
 }
 
 @media (max-width: 768px) {
   .portfolio .portfolio-content .portfolio-info .details-link {
-    font-size: 70px; /* 모바일에서는 조금 작게 */
+    font-size: 35px; /* 모바일에서는 조금 작게 */
   }
 }
 
